@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33717719371859722}
   - component: {fileID: 23074817640537244}
   m_Layer: 0
-  m_Name: BananaL
+  m_Name: BananaL_pre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

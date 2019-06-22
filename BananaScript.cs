@@ -51,8 +51,8 @@ public class BananaScript : ModScript
     {
         if (arg0.name.Contains("Stage"))
         {
-            object_left = ModAssets.Instantiate<GameObject>("BananaL");
-            object_right = ModAssets.Instantiate<GameObject>("BananaR");
+            object_left = ModAssets.Instantiate<GameObject>("BananaL_pre");
+            object_right = ModAssets.Instantiate<GameObject>("BananaR_pre");
         }
     }
 
