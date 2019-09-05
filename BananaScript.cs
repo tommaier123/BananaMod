@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UMod;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 
 public class BananaScript : ModScript
@@ -18,6 +19,7 @@ public class BananaScript : ModScript
     public override void OnModLoaded()
     {
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+        log("BananaMod loaded");
     }
 
     public override void OnModUpdate()
@@ -59,5 +61,19 @@ public class BananaScript : ModScript
     public override void OnModUnload()
     {
         SceneManager.sceneLoaded -= SceneManager_sceneLoaded;
+        log("BananaMod loaded");
+    }
+
+    public void log(string str)
+    {
+        //get file path
+        var dataPath = Application.dataPath;
+        var filePath = dataPath.Substring(0, dataPath.LastIndexOf('/')) + "/Novalog.txt";
+
+        //write
+        using (var streamWriter = new StreamWriter(filePath, true))
+        {
+            streamWriter.WriteLine(str);
+        }
     }
 }
